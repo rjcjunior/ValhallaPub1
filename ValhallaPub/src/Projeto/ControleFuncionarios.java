@@ -11,11 +11,10 @@ import java.util.ArrayList;
  *
  * @author Ricardo Junior
  */
-public class ValhallaPub {
-    
+public class ControleFuncionarios {
     private ArrayList<Funcionario> funcionarios;
     
-    public ValhallaPub (){
+    public ControleFuncionarios (){
         funcionarios = new ArrayList<Funcionario>();    
     }
     

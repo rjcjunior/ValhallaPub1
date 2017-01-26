@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Pedido {
     
     private ArrayList<ItensPedido> itenspedido;
-    private float total = 0;
+    private float total;
     private boolean situacao = false; // Se situacao é false, entao pedido está fechado
     
      public Pedido (){
@@ -35,9 +35,15 @@ public class Pedido {
             ItensPedido aux= new ItensPedido(p,q); 
             itenspedido.add(aux);
          }
-         
+         atualizartotal();
      }
      
+     private void atualizartotal(){
+         total=0;
+         for(ItensPedido i:itenspedido){
+             total+=i.gettotal();
+         }
+     }
      public boolean getsitacao(){
         return this.situacao;
      }
@@ -49,6 +55,9 @@ public class Pedido {
          itenspedido.remove(p);
      }
      
+     public float gettotal(){
+         return this.total;
+     }
      public boolean contem(Produto p) {
              return itenspedido.stream().anyMatch((produto) -> (produto.getnome().equalsIgnoreCase(p.getnome())));
         }

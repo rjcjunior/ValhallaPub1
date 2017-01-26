@@ -6,9 +6,9 @@
 package Projeto;
 
 /**
- *
- * @author Ricardo Junior
- */
+ * classe para add itens no bar
+ * @author Ricardo Junior 
+*/
 public class boot {
     private Estoque e;
     private ControleFuncionarios cf;

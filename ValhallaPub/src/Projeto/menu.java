@@ -130,16 +130,32 @@ public class menu {
     int op = ler.nextInt();     
      switch (op){
             case 1:{
-                
+                System.out.println("Entre com o nome ");    
+                String name = ler.next();
+                System.out.println("Entre com o valor ");    
+                double preco = ler.nextDouble();
+                System.out.println("Entre com a qtd ");    
+                int qnt = ler.nextInt();
+                Produto p = new Produto(name, preco, qnt);
+                e.add(p);
                 break;
             }
             case 2:{
-                break;
-            }
+                System.out.println("Entre com o nome ");    
+                String name = ler.next();
+                System.out.println("Entre com o valor ");    
+                double preco = ler.nextDouble();
+                System.out.println("Entre com a qtd a acrescentar");    
+                int qnt = ler.nextInt();
+                Produto p = new Produto(name, preco, qnt);
+                e.add(p);
+                }
             case 3:{
+                //mexer
                 break;
             }
             case 4:{
+                e.listarEstoque();
                 break;
             }
             case 5:{

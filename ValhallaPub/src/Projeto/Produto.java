@@ -15,7 +15,7 @@ public class Produto {
         private double valor;
         private int qnt;
         
-        public Produto(String nome, double valor) {
+        public Produto(String nome, double valor,int qnt) {
                 
                 this.nome=nome;
                 this.valor=valor;

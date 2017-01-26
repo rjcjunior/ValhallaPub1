@@ -15,6 +15,7 @@ public class boot {
     public boot(Estoque e, ControleFuncionarios cf){
         this.e=e;
         this.cf=cf;
+        add();
     }
     
     public void add(){
@@ -24,9 +25,9 @@ public class boot {
         e.add(p1);
         Produto p2 = new Produto("Biscoito", 2.0,2);
         e.add(p2);
-        Produto p3 = new Produto("Alface", 2.0,2);
+        Produto p3 = new Produto("Cerveja", 2.0,2);
         e.add(p3);
-        Produto p4 = new Produto("Cebola", 2.0,2);
+        Produto p4 = new Produto("Catuaba", 2.0,2);
         e.add(p4);
         Produto p5 = new Produto("Macarrao", 2.0,2);
         e.add(p5);

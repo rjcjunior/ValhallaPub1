@@ -29,7 +29,7 @@ public class Estoque {
             for (Produto p : produtos) {
                 System.out.println("Codigo: "+p.getCodigo());
                 System.out.println("Nome: "+p.getnome());
-                System.out.println((int)p.getqnt()+" unidades");
+                System.out.println(p.getqnt()+" unidades");
                 System.out.println("================================");
             }
         }

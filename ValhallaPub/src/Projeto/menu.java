@@ -56,17 +56,20 @@ public class menu {
      switch (op){
             case 1:{
                 gerenciafuncionarios();
+                menugerente();
                 break;
             }
             
             case 2:{
                 gerenciarprodutos();
+                menugerente();
                 break;
             }
             
             case 3:{
                 System.out.println("Venda total de R$ ");
-                System.out.println(cp.getvendageral());   
+                System.out.println(cp.getvendageral());  
+                menugerente();
                 break;
                 
             }
@@ -225,7 +228,7 @@ public class menu {
                 break;
             }
             case 4:{
-                menufuncionario();    
+                chamamenu();    
                 break;
             }
             

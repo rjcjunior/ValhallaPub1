@@ -19,6 +19,7 @@ public class Produto {
                 
                 this.nome=nome;
                 this.valor=valor;
+                this.qnt=qnt;
         }
         public int getCodigo() {
             return codigo;

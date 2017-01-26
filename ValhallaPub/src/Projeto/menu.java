@@ -17,10 +17,12 @@ public class menu {
     Controlepedidos cp;
     Estoque e;
     int id=0;
+    boot b;
     public menu(){
         cf = new ControleFuncionarios();
         e = new Estoque();
         cp = new Controlepedidos();
+        b= new boot(e,cf);
     }
     
     public void chamamenu(){
@@ -206,15 +208,19 @@ public class menu {
                 pe=cp.returnpedido(aux);
                 System.out.println("Entre com o nome do produto");
                 String aux2 = ler.next();
-                
-                
+                Produto p=e.pegaprod(aux2);
                 System.out.println("Entre com a qt do pedido");
                 int aux4 = ler.nextInt();
-                pe.addprod(aux2, aux4);
+                pe.addprod(p, aux4);
                 menufuncionario();
                 break;
             }
             case 3:{
+                System.out.println("Entre com o id do pedido");
+                int aux = ler.nextInt();
+                Pedido pe=cp.returnpedido(id);
+                boolean aux2=false;
+                pe.setsituacao(aux2);
                 menufuncionario();    
                 break;
             }

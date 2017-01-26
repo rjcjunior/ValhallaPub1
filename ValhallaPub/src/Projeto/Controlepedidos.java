@@ -13,11 +13,46 @@ import java.util.ArrayList;
  */
 public class Controlepedidos {
  private ArrayList<Pedido> pedidos;
- float lucrogeral=0;
+ private float vendageral;
+ 
       
     public Controlepedidos (){
         pedidos = new ArrayList<Pedido>();    
     }   
+    
+    public float getvendageral(){
+        vendageral=0;
+        for (Pedido p:pedidos){
+            vendageral+=p.gettotal();
+        }
+        return this.vendageral;
+    }
+    
+    public void addpedido(Pedido p){
+        pedidos.add(p);
+    }
+    
+    public boolean contem(Pedido p1) {
+             return pedidos.stream().anyMatch((p) -> (p.getid()==(p1.getid())));
+        }      
+    
+    public boolean contem(int id) {
+             return pedidos.stream().anyMatch((p) -> (p.getid()==id));
+        }      
+    
+    
+    public Pedido returnpedido(int id){
+        int i = 0;
+        for (Pedido p:pedidos){
+            if (p.getid()==id){
+                break;
+            }
+            else {
+                i+=1;
+            }
+        }
+        return pedidos.get(i);
+    }
     
     
     

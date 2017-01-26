@@ -46,7 +46,7 @@ public class menu {
     System.out.println("============ Selecione a opção ============");
     System.out.println("1) Gerenciar Funcionarios ");
     System.out.println("2) Gerenciar Produtos ");
-    System.out.println("3) Consultar lucro ");    
+    System.out.println("3) Consultar total de vendas ");    
     System.out.println("4) Voltar ");    
     
     int op = ler.nextInt();     
@@ -57,9 +57,14 @@ public class menu {
             }
             
             case 2:{
+                gerenciarprodutos();
+                break;
             }
             
             case 3:{
+                System.out.println("Venda total de R$ ");
+                System.out.println(cp.getvendageral());   
+                break;
                 
             }
             
@@ -86,6 +91,7 @@ public class menu {
                 System.out.println("Entre com o cpf ");    
                 String cpf = ler.next();
                 cf.addfuncionario(name, cpf);
+                gerenciafuncionarios();
                 break;
             }
             
@@ -95,10 +101,12 @@ public class menu {
                 System.out.println("Entre com o cpf ");    
                 String cpf = ler.next();
                 cf.addgerente(name, cpf);
+                gerenciafuncionarios();
                 break;
             }
             case 3:{
                 cf.listarfunc();
+                gerenciafuncionarios();
                 break;
             }
             
@@ -106,11 +114,13 @@ public class menu {
                 System.out.println("Entre com o cpf ");    
                 String cpf = ler.next();
                 cf.removerfunc(cpf);
+                gerenciafuncionarios();
                 break;
             }
             
             case 5:{
                 menugerente();
+                gerenciafuncionarios();
                 break;
             }
              
@@ -138,6 +148,7 @@ public class menu {
                 int qnt = ler.nextInt();
                 Produto p = new Produto(name, preco, qnt);
                 e.add(p);
+                gerenciarprodutos();
                 break;
             }
             case 2:{
@@ -149,13 +160,17 @@ public class menu {
                 int qnt = ler.nextInt();
                 Produto p = new Produto(name, preco, qnt);
                 e.add(p);
-                }
+                gerenciarprodutos();
+                break;
+            }
             case 3:{
                 //mexer
+                gerenciarprodutos();
                 break;
             }
             case 4:{
                 e.listarEstoque();
+                gerenciarprodutos();
                 break;
             }
             case 5:{

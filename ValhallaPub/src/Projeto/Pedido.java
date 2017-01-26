@@ -16,11 +16,15 @@ public class Pedido {
     private ArrayList<ItensPedido> itenspedido;
     private float total;
     private boolean situacao = false; // Se situacao é false, entao pedido está fechado
-    
-     public Pedido (){
+    int id;
+     public Pedido (int id){
         itenspedido = new ArrayList<ItensPedido>();     
+        this.id=id;
      }
      
+     public int getid(){
+         return this.id;
+     }
      public void addprod(Produto p, int q){
          if (contem(p)){
          int i=0;

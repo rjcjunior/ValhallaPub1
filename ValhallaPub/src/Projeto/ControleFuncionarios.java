@@ -53,6 +53,25 @@ public class ControleFuncionarios {
                 System.out.println("================================");
             }
         } 
+    public void removerfunc(String cpf){
+        int i = 0;
+        int a=-1;
+        for (Funcionario f:funcionarios){
+            
+            if (cpf.equalsIgnoreCase(f.getcpf())){
+                a=1;
+                break;
+            }
+            i+=1;
+        }
+        if (a==-1){
+            System.out.println("Funcionario não encontrado");
+               
+           }
+        else {
+            funcionarios.remove(i);
+        }
+        }
     
     public boolean contem(Funcionario p) {
              return funcionarios.stream().anyMatch((funcionario) -> (funcionario.getnome().equalsIgnoreCase(p.getnome())));

@@ -111,38 +111,17 @@ public class Estoque {
             {   return -1;
                 }
             }
-        
-        public void vender(int cod, int qnt){
-           int i=contem(cod);
-           int aux = produtos.get(i).getqnt();  
-           if (contem(cod)>=0 && (aux>=qnt)){
-               aux = aux - qnt;
-               produtos.get(i).setqnt(aux);
-
+        public Produto pegaprod(String nome){
+            int i=0;
+            for (Produto pe:produtos){
+                if(nome.equalsIgnoreCase(pe.getnome())){
+                    break;
+                }
+                else{
+                    i+=1;
+                }
+            }
+                return produtos.get(i);
+            }          
            }
-           else{
-               System.out.println("Produto inexistente ou Qntd excedente, Venda não concluida");
-           }
-        }
         
-        public void vender(int cod, double qnt){
-           int i=contem(cod);
-           int aux = produtos.get(i).getqnt();               
-           if (contem(cod)>=0 && (aux>=qnt)){
-               aux = (int) (aux - qnt);
-               produtos.get(i).setqnt(aux);
-
-           }
-           else{
-               System.out.println("Produto inexistente ou Qntd excedente, Venda não concluida");
-           }
-        }
-        
-
-        
-        
-
-
-}
-
-

@@ -15,7 +15,7 @@ public class Pedido {
     
     private ArrayList<ItensPedido> itenspedido;
     private float total;
-    private boolean situacao = false; // Se situacao é false, entao pedido está fechado
+    private boolean situacao = true; // Se situacao é false, entao pedido está fechado
     int id;
      public Pedido (int id){
         itenspedido = new ArrayList<ItensPedido>();     

@@ -16,6 +16,7 @@ public class menu {
     ControleFuncionarios cf;
     Controlepedidos cp;
     Estoque e;
+    int id=0;
     public menu(){
         cf = new ControleFuncionarios();
         e = new Estoque();
@@ -187,8 +188,42 @@ public class menu {
     System.out.println("2) adicionar produto no pedido ");
     System.out.println("3) fechar pedido ");    
     System.out.println("4) Voltar ");    
-
     int op = ler.nextInt();    
+    switch (op){
+            case 1:{
+                id+=1;
+                Pedido pe = new Pedido(id);
+                System.out.println("Id do pedido é ");
+                System.out.println(id);
+                cp.addpedido(pe);
+                menufuncionario();    
+                break;
+            }
+            case 2:{
+                System.out.println("Entre com o id do pedido");
+                int aux = ler.nextInt();
+                Pedido pe;
+                pe=cp.returnpedido(aux);
+                System.out.println("Entre com o nome do produto");
+                String aux2 = ler.next();
+                
+                
+                System.out.println("Entre com a qt do pedido");
+                int aux4 = ler.nextInt();
+                pe.addprod(aux2, aux4);
+                menufuncionario();
+                break;
+            }
+            case 3:{
+                menufuncionario();    
+                break;
+            }
+            case 4:{
+                menufuncionario();    
+                break;
+            }
+            
+    }
     }
     
 }

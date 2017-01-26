@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Controlepedidos {
  private ArrayList<Pedido> pedidos;
  private float vendageral;
- 
+
       
     public Controlepedidos (){
         pedidos = new ArrayList<Pedido>();    

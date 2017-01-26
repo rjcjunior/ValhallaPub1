@@ -1,0 +1,12 @@
+Requisitos funcionais
+
+- Gerente pode adicionar, remover, atualizar funcionarios
+- Funcionario pode incluir ou remover itens na comanda/pedido
+- Funcionario pode abrir uma nova comanda/pedido
+- Funcionario pode fechar uma comanda/pedido, ao fechar terá de ser feito o pagamento
+- Gerente pode adicionar, remover, atualizar produtos
+- Gerente pode consultar lucro do bar até o momento
+
+
+Requisitos não funcionais
+- O sistema será em Java
